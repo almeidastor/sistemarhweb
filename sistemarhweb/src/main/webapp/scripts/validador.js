@@ -10,7 +10,11 @@
         mensagem.textContent = "Usuário não encontrado.";
         mensagem.style.display = "block";
         mensagem.style.position = "absolute";
-    	mensagem.style.color = "#FF0000";}    
+    	mensagem.style.color = "#FF0000";
+    	
+    	var telaDeLogin = document.getElementById("teladelogin");
+    telaDeLogin.classList.add("tremor");
+    	}    
     });
  
 
@@ -18,14 +22,14 @@
 
  function validar(){
 	 let nome = frmFuncionario.nome.value
-	let cpf = frmFuncionario.cpf.value
+	let senha = frmFuncionario.senha.value
 
 	if(nome === ""){
-		alert ('Preencha o campo nome')
+		alert ('Preencha o usuário')
 		frmFuncionario.nome.focus()
 		return false
-	}else if(cpf === ""){
-		alert ('Preencha o campo cpf')
+	}else if(senha === ""){
+		alert ('Coloque sua senha')
 		frmFuncionario.cpf.focus()
 		return false
 	 }else{
