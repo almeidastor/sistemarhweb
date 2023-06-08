@@ -9,7 +9,8 @@
         var mensagem = document.getElementById("mensagem");
         mensagem.textContent = "Usuário não encontrado.";
         mensagem.style.display = "block";
-        mensagem.style.position = "absolute";}    
+        mensagem.style.position = "absolute";
+    	mensagem.style.color = "#FF0000";}    
     });
  
 
@@ -31,3 +32,5 @@
 		 document.forms["frmFuncionario"].submit()
 	 }
  }
+
+ 
