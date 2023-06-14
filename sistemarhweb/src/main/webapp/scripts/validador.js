@@ -18,6 +18,17 @@
     });
  
 
+/** Manter conectado*/
+const manterConectadoCheckbox = document.getElementById("manterConectado");
+if (manterConectadoCheckbox.checked) {
+  localStorage.setItem("loginStatus", "loggedIn");
+}
+
+const loginStatus = localStorage.getItem("loginStatus");
+if (loginStatus === "loggedIn") {
+	  window.location.href = "main.jsp";
+}
+
 /** Validação de formulário */
 
  function validar(){
@@ -36,5 +47,25 @@
 		 document.forms["frmFuncionario"].submit()
 	 }
  }
+
+/** Menu Drop Down */
+	 
+
+	 function ocultarExibir() {
+
+	    document.getElementById("divmailsent").style.display = 'block';
+	    closeocex();
+	  }
+
+	  function closeocex() {
+	  	var inputmailfooter = $("#inputemail-footer");
+	 	var inputtextfooter = $("#inputtext-footer");
+    	setInterval(() => {
+    	document.getElementById("divmailsent").style.display = 'none';
+    }, 500);
+    	console.log(inputmailfooter.val(""));
+	    console.log(inputtextfooter.val(""));
+	}
+	
 
  

@@ -27,7 +27,10 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+	
 	}
+	
+	
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,6 +43,7 @@ public class LoginServlet extends HttpServlet {
 	    boolean usuarioValido = controller.autenticarUsuario(nome, senha);
 
 	    if (usuarioValido) {
+	    	request.getSession().setAttribute("usuarioLogado", true);
 	        response.sendRedirect("main.jsp");
 	    } else {
 	       response.sendRedirect("index.html?erro=1");
