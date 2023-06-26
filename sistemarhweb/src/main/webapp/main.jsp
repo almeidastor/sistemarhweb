@@ -26,7 +26,8 @@
 </head>
 
 <body>
-<div class="header"><nav class="navtoggle">
+<section class="containerextranet" id="container" style="background-image: url('images/img-enterprise/Capa.jpg');">
+<div class="header" id="topo"><nav class="navtoggle">
 	<div id=div-logo-nav><img id=horizont-logo-nav src="images/logo/mini.png"></div>
 
 		<div class="toggle">
@@ -41,20 +42,22 @@
   <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
 </svg>
 
- 			<div class = "user"></div>
+ 			<div class = "user" id="user"></div>
  			 			
 </div>
 
 			<ul class=ula name>
-				<li class=lia id="icon-nav-toggle"><a href="main.jsp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+				<li class=lia id="icon-nav-toggle"><a href="main.jsp"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
   					<path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
-  					<path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/></svg></a></li>
-				<li class=lia id="menu-nav-toggle"><a href="main.jsp">Início</a></li>
-				<li class=lia id="menu-nav-toggle"><a href="index.html">Loja</a></li>
-				<li class=lia id="menu-nav-toggle"><a href="index.html">A Clínica</a></li>
-				<li class=lia id="menu-nav-toggle"><a href="index.html">Blog</a></li>
-				<li class=lia id="menu-nav-toggle"><a href="index.html">Sobre nós</a></li>
-				<li class=lia id="menu-nav-toggle"><div class = "user"></div></li>
+  					<path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/></svg> Inicio </a></li>
+				<li class=lia id="menu-nav-toggle"><a href="index.html">Indice</a></li>
+				<li class=lia id="menu-nav-toggle"><a href="portalfuncionario.jsp">Portal</a></li>
+				<li class=lia id="menu-nav-toggle"><a href="index.html">Meu perfil</a></li>
+				<li class=lia id="menu-nav-toggle"><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+  <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+</svg> Sair</a></li>
+				<li class=lia id="menu-nav-toggle"><div class = "user" id="user2"></div></li>
   						
   				 
 			</ul></div></nav>
@@ -65,9 +68,11 @@
 				$('.menu').click(function(){
 					$(".ula").toggleClass('active');
 				})
-			})</script>
+			})</script></section>
 			
-		oie
+		
+		
+		
 </body>
 <footer> 
 	<div class="footer">
@@ -78,10 +83,11 @@
 
 	<div id="footer-frame2">
 			<nav class="navfooter">
-					<a id="linkfooter" href="main.jsp">Início</a><br>
-					<a id="linkfooter" href="index.html">Loja</a><br>
-					<a id="linkfooter" href="index.html">A Clínica</a><br>
-					<a id="linkfooter" href="index.html">Blog</a><br>
+					<a id="linkfooter" href="#topo">Ir para o topo</a><br>
+					<a id="linkfooter" href="main.jsp"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+  					<path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+  					<path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/></svg> Página inicial</a><br>
+					<a id="linkfooter" href="index.html">Contato</a><br>
 					<a id="linkfooter" href="index.html">Sobre nós</a><br>
 					</nav>
 	</div>
