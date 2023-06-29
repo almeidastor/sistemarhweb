@@ -15,10 +15,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portal Funcionarios</title>
+<title>Novo Funcionario</title>
 <script src="scripts/validador.js"></script>
+<script src="scripts/validador2.js"></script>
 <link rel="stylesheet" href="css/style2.css">
-<link rel="stylesheet" href="css/style3.css">
+<link rel="stylesheet" href="css/style4.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
@@ -27,7 +28,6 @@
 </head>
 
 <body>
-<section class="containerextranet" id="containerfunc" style="background-image: url('images/img-enterprise/Portfuncionario.jpg');">
 <div class="header" id="topo"><nav class="navtoggle">
 	<div id=div-logo-nav><img id=horizont-logo-nav src="images/logo/mini.png"></div>
 
@@ -69,14 +69,28 @@
 				$('.menu').click(function(){
 					$(".ula").toggleClass('active');
 				})
-			})</script></section>
+			})</script>
 
-		<div class="menuinterno"><div id="logoindexdiv0">
-		<img class="logoindexdiv1" src="images/mini/imgmenu.jpg">
-		<a id="textlogo" href="novo.jsp"><div id="textlogotxt"><p id="textlogo1">Novo<br> Funcionário</p></div></a>
-		</div>
-		
-		</div>
+<form name="frmFuncionario" action="insert">
+
+
+
+<table>
+	<tr>
+		<td><input type = "text" name = "nome" placeholder = "Nome"></td>
+	</tr>
+	<tr>
+		<td><input type = "text" name = "cpf" placeholder = "CPF"></td>	
+	</tr>
+		<tr>	
+		<td><input type = "text" name = "telefone1" placeholder = "Telefone"></td>
+	</tr>
+	
+</table>
+<input type = "button" value="adicionar" onclick="validar()">
+</form>
+
+<script src="scripts/validador.js"></script>
 		
 </body>
 <footer> 
