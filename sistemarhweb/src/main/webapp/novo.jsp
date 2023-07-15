@@ -17,7 +17,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Novo Funcionario</title>
 <script src="scripts/validador.js"></script>
-<script src="scripts/validador2.js"></script>
 <link rel="stylesheet" href="css/style2.css">
 <link rel="stylesheet" href="css/style4.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -25,6 +24,21 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto:500,700&display=swap" rel="stylesheet"> 
 <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+  <script>
+    function exibirFoto(event) {
+      var arquivo = event.target.files[0];
+      var leitor = new FileReader();
+      
+      leitor.onload = function(evento) {
+        var imagem = document.getElementById('imagem');
+        imagem.src = evento.target.result;
+      }
+      
+      leitor.readAsDataURL(arquivo);
+    }
+  </script>
 </head>
 
 <body>
@@ -73,7 +87,10 @@
 
 <form name="frmFuncionario" action="insert">
 
-
+<div>
+    <img id="imagem" src="#" alt="Foto" width="300">
+  </div>
+<input type="file" accept="image/*" onchange="exibirFoto(event)">
 
 <table>
 	<tr>
